@@ -6,13 +6,21 @@ export const Container = styled.div`
   background-color: #fff;
   box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
   padding: 40px;
+  padding-top: 25px;
   margin: auto;
   text-align: left;
   margin-top: 100px;
+  h1 {
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    color: teal;
+    font-size: 40px;
+  }
 `;
 
-export const StyledForm = styled.div`
+export const StyledForm = styled.form`
   display: flex;
+  position: relative;
 `;
 
 export const InputField = styled.input`
@@ -47,13 +55,13 @@ export const TodoItemContainer = styled.div`
   margin-top: 10px;
   justify-content: space-between;
   & > div {
-    color: ${(props) => (props.status ? "gray" : "black")};
-    text-decoration: ${(props) => (props.status ? "line-through" : "none")};
     border-right: 1px solid lightgray;
-    width: 430px;
+    width: 427px;
     font-size: 18px;
     padding-left: 10px;
+    margin-top: 0;
   }
+
   & > button {
     height: 50px;
     width: 80px;
@@ -66,6 +74,8 @@ export const TodoItemContainer = styled.div`
     border-radius: 5px;
     cursor: pointer;
     outline: none;
+    position: relative;
+    top: 8px;
   }
   button:hover {
     background-color: red;
@@ -73,9 +83,8 @@ export const TodoItemContainer = styled.div`
   }
   div > p {
     margin-bottom: 0;
-  }
-  span {
-    text-decoration: none !important;
-    color: gray;
+
+    color: ${(props) => (props.status ? "gray" : "black")};
+    text-decoration: ${(props) => (props.status ? "line-through" : "none")};
   }
 `;

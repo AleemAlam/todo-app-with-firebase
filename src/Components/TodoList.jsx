@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { TodoItem } from "./TodoItem";
 
-export const TodoList = () => {
-  const [todos, setTodos] = useState([
-    { todo: "New Todo", status: false, time: "10:00 AM  " },
-  ]);
-
+export const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
   return (
     <>
       {todos.map((todo) => (
-        <TodoItem {...todo} />
+        <TodoItem
+          key={todo.id}
+          {...todo}
+          toggleTodo={toggleTodo}
+          deleteTodo={deleteTodo}
+        />
       ))}
     </>
   );

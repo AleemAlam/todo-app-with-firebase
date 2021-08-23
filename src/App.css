@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .App {
   text-align: center;
 }
@@ -11,5 +12,6 @@ body {
     rgba(0, 212, 255, 1) 100%
   );
   width: 100vw;
+  font-family: "Poppins", sans-serif;
   height: 100vh;
 }
